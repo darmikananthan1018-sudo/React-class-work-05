@@ -9,37 +9,55 @@ for client-side navigation.
 ```bash
 npm install
 npm run dev
-```
+# ## Project structure
 
-Then open the printed local URL (defaults to http://localhost:5173).
-
-## Project structure
-
-```
+# ```
+# src/
+#   components/
+#     Navbar.jsx    # Shared header/nav, used on every page, with react-router-dom NavLink
+#     Footer.jsx    # Shared footer
+#   pages/
+#     Home.jsx      # from index.html
+#     Faq.jsx       # from faq.html
+#     AboutUs.jsx   # from about.html
+#     Contact.jsx   # from contact.html
+#   App.jsx         # <Routes> / <Route> definitions
+#   main.jsx        # <BrowserRouter> root render
+# public/
+#   assets/         # original template CSS, images, webfonts
+#   vendor/         # bootstrap + jquery (jquery is unused, kept only for bootstrap.min.js)
+# ```
 src/
   components/
-    Navbar.jsx    # Shared header/nav, used on every page, with react-router-dom NavLink
-    Footer.jsx    # Shared footer
+    Navbar.jsx
+    Footer.jsx
   pages/
-    Home.jsx      # from index.html
-    Faq.jsx       # from faq.html
-    AboutUs.jsx   # from about.html
-    Contact.jsx   # from contact.html
-  App.jsx         # <Routes> / <Route> definitions
-  main.jsx        # <BrowserRouter> root render
+    Home.jsx
+    Faq.jsx
+    AboutUs.jsx
+    Contact.jsx
+  App.jsx
+  main.jsx
 public/
-  assets/         # original template CSS, images, webfonts
-  vendor/         # bootstrap + jquery (jquery is unused, kept only for bootstrap.min.js)
-```
+  assets/
+  vendor/
 
 ## Routes
 
-| Path       | Page       |
-|------------|------------|
-| `/`        | Home       |
-| `/faq`     | Faq        |
-| `/about`   | About Us   |
-| `/contact` | Contact    |
+| Path | Page |
+|------|------|
+| `/` | Home |
+| `/faq` | Faq |
+| `/about` | About Us |
+| `/contact` | Contact |
+# ## Routes
+
+# | Path       | Page       |
+# |------------|------------|
+# | `/`        | Home       |
+# | `/faq`     | Faq        |
+# | `/about`   | About Us   |
+# | `/contact` | Contact    |
 
 ## Notes on the conversion
 
@@ -61,3 +79,27 @@ public/
 - Bootstrap and Font Awesome CSS, and all images/webfonts, were copied as-is
   into `public/` and linked from `index.html` so the original visual design
   is preserved.
+
+src/
+  components/
+    Navbar.jsx
+    Footer.jsx
+  pages/
+    Home.jsx
+    Faq.jsx
+    AboutUs.jsx
+    Contact.jsx
+  App.jsx
+  main.jsx
+public/
+  assets/
+  vendor/
+
+## Routes
+
+| Path | Page |
+|------|------|
+| `/` | Home |
+| `/faq` | Faq |
+| `/about` | About Us |
+| `/contact` | Contact |
