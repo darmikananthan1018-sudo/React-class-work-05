@@ -1,0 +1,16 @@
+/* Supplementary styles.
+   The original TemplateMo template relied on assets/js/custom.js to toggle
+   the mobile nav open/closed and to highlight the active nav link. That
+   script isn't included in this repo, so the same behaviour is implemented
+   here in React (Navbar.jsx) and styled with this small stylesheet. */
+
+@media (max-width: 767px) {
+  .header-area .main-nav .nav.menu-active {
+    display: block !important;
+  }
+}
+
+.header-area .main-nav .nav li a.active {
+  color: #5b03e4 !important;
+  opacity: 1;
+}
